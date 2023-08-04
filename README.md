@@ -1,69 +1,69 @@
-# Simulação de Colisão de Esferas 3D
+# 3D Sphere Collision Simulation
 
-Esta é uma simulação em MATLAB que cria uma animação interativa de três esferas em um espaço tridimensional. As esferas têm velocidades e cores diferentes, e a simulação demonstra suas trajetórias, colisões e interações em um ambiente virtual.
+This is a MATLAB simulation that creates an interactive animation of three spheres in a three-dimensional space. The spheres have different velocities and colors, and the simulation showcases their trajectories, collisions, and interactions in a virtual environment.
 
 ![Animação de Colisão de Esferas](sphere_collision_animation.gif)
 
 
+## Requirements
 
-## Requisitos
+Make sure you have MATLAB installed on your system before running this simulation.
 
-Certifique-se de ter o MATLAB instalado em seu sistema antes de executar esta simulação.
+## Execution
 
-## Execução
+1. Clone or download this repository to your local machine.
 
-1. Clone ou faça o download deste repositório para sua máquina local.
+2. Open MATLAB and navigate to the directory where the simulation files are located.
 
-2. Abra o MATLAB e navegue até o diretório onde os arquivos da simulação estão localizados.
+3. Open the `SphereCollision3D.m` file in MATLAB.
 
-3. Abra o arquivo `SphereCollision3D.m` no MATLAB.
+4. Run the script. You will see a pop-up animation window displaying the spheres interacting in a 3D environment.
 
-4. Execute o script. Você verá uma janela de animação pop-up exibindo as esferas interagindo em um ambiente 3D.
+## Simulation Details
 
-## Detalhes da Simulação
+### Initial Parameters
 
-### Parâmetros Iniciais
+The code defines some global initial variables:
 
-O código define algumas variáveis iniciais globais:
+- `width`, `scene_height`, and `depth`: Dimensions of the 3D space.
+- `pos`, `pos2`, and `pos3`: Initial positions of the three spheres.
+- `vel`, `vel2`, and `vel3`: Initial velocities of the spheres.
+- `radius`: Radius of the spheres.
+- `color1`, `color2`, and `color3`: Colors of the spheres.
 
-- `width`, `scene_height` e `depth`: Dimensões do espaço 3D.
-- `pos`, `pos2` e `pos3`: Posições iniciais das três esferas.
-- `vel`, `vel2` e `vel3`: Velocidades iniciais das esferas.
-- `radius`: Raio das esferas.
-- `color1`, `color2` e `color3`: Cores das esferas.
+### Animation
 
-### Animação
+The animation is created using the `draw_spheres_3D()` function. It utilizes a loop that updates the position of the spheres based on their velocities and handles collisions with the walls of the space. The updated positions are used to render the spheres in their new positions in each frame.
 
-A animação é criada por meio da função `draw_spheres_3D()`. Ela utiliza um loop que atualiza a posição das esferas com base em suas velocidades e lida com colisões com as paredes do espaço. As posições atualizadas são usadas para renderizar as esferas em suas novas posições a cada quadro.
+### Collisions
 
-### Colisões
+Collision detection is performed through distance checks between the spheres. If the distance between two spheres is less than twice the radius, a collision is registered. This is done for all possible combinations of spheres.
 
-A detecção de colisão é realizada por meio de verificações de distância entre as esferas. Se a distância entre duas esferas for menor do que duas vezes o raio, uma colisão é registrada. Isso é feito para todas as combinações possíveis de esferas.
+### Video Generation
 
-### Geração de Vídeo
+The code generates a video file named `sphere_collision_animation.mp4`. This video file captures the entire animation of the simulation, including the collisions and interactions between the spheres.
 
-O código gera um arquivo de vídeo chamado `sphere_collision_animation.mp4`. Este arquivo de vídeo captura toda a animação da simulação, incluindo as colisões e interações entre as esferas.
+## Custom Configuration
 
-## Configuração Personalizada
+If you want to customize the simulation, you can adjust the following parameters in the code:
 
-Se você deseja personalizar a simulação, você pode ajustar os seguintes parâmetros no código:
+- `width`, `scene_height`, and `depth` to scale the 3D space.
+- `vel`, `vel2`, and `vel3` to change the velocities of the spheres.
+- `radius` to set the size of the spheres.
+- `color1`, `color2`, and `color3` to choose the colors of the spheres.
 
-- `width`, `scene_height` e `depth` para dimensionar o espaço 3D.
-- `vel`, `vel2` e `vel3` para alterar as velocidades das esferas.
-- `radius` para definir o tamanho das esferas.
-- `color1`, `color2` e `color3` para escolher as cores das esferas.
+## Disclaimer
 
-## Aviso
+This simulation is designed for educational and demonstration purposes. Physical accuracy may not be strict. Use it to experiment and learn basic concepts of simulations in MATLAB.
 
-Esta simulação foi projetada para fins educacionais e de demonstração. A precisão física pode não ser rigorosa. Use-a para experimentar e aprender conceitos básicos de simulações em MATLAB.
+## Author
 
-## Autor
+Víctor Duarte Melo
 
-[Seu Nome]
+## License
 
-## Licença
-
-Este projeto está licenciado sob a Licença [Nome da Licença]. Consulte o arquivo `LICENSE` para obter mais detalhes.
+This project is licensed under the MIT License. Refer to the `LICENSE` file for more details.
 
 ---
 
+Feel free to add or modify sections as needed. This `readme.md` guide will provide a comprehensive overview of the simulation and the underlying code for users visiting your GitHub repository.
